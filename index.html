@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portofolio Adillah Muhammad Haqqan</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+   
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="starfield"></canvas>
+
+  <header>
+    <h1>Adillah Muhammad Haqqan</h1>
+    <nav>
+      <a href="#about">About Me</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button id="toggleTheme" aria-label="Toggle dark/light mode">🌙</button>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <div class="about-card">
+        <img
+          src="data:image/png;base64,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"
+          alt="Adillah Muhammad Haqqan"
+          class="profile-pic"
+        />
+        <p>
+         Hallo,Saya Adillah Muhammad Haqqan.Saya adalah seorang pengembang web dengan pengalaman dalam membangun aplikasi web yang responsif dan mudah digunakan. Saya memiliki minat yang kuat dalam desain web dan selalu berusaha untuk menciptakan antarmuka yang menarik secara visual dan intuitif.
+        </p>
+        <p>Saya memiliki latar belakang pendidikan di bidang Teknik Informatika dan telah bekerja pada berbagai proyek web, mulai dari website portofolio pribadi hingga aplikasi web yang lebih kompleks.</p>
+        <p>
+          Mahir dalam HTML, CSS, JavaScript,dan Laravel.
+        Ini adalah portofolio saya di mana saya menampilkan karya-karya terbaik saya.
+        </p>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="projects">
+        <div class="project-card">
+          <img src="tekateki.jpg" alt="Interactive Starfield" class="project-img" />
+          <h3>Game Teka-teki</h3>
+          <p>
+            Website teka-teki interaktif yang dibuat dengan HTML, CSS, dan JavaScript murni.
+             Menawarkan pengalaman bermain yang menyenangkan dan responsive di berbagai perangkat. 
+          </p>
+          <a href="https://muhammadhakan.github.io/Teka-Teki./" target="_blank" class="project-link">View Project</a>
+        </div>
+        <div class="project-card">
+          <img src="Krem Website Makanan Lezat Indonesia.jpg" alt="Dark Light Toggle" class="project-img" />
+          <h3>Food-Store</h3>
+          <p>
+          Food Store adalah website pemesanan makanan yang saya kembangkan menggunakan Laravel dan Filament sebagai backend dan admin panel.
+           Proyek ini dirancang untuk memberikan pengalaman pengguna yang intuitif dan efisien, baik untuk pelanggan maupun admin.
+          </p>
+          <a href="https://github.com/muhammadhakan/food-store" target="_blank" class="project-link">View Project</a>
+        </div>
+        <div class="project-card">
+          <img src="inilah.png" alt="Portfolio Website" class="project-img" />
+          <h3>Peduli Masyarakat</h3>
+          <p>
+            Peduli Masyarakat adalah website berbasis Laravel yang saya kembangkan sebagai solusi pencatatan data kematian masyarakat secara digital, akurat, dan terorganisir.
+             Website ini memungkinkan petugas atau masyarakat untuk menginput data kematian melalui formulir yang telah disediakan.
+          </p>
+          <a href="https://github.com/muhammadhakan/PeduliMasyarakat" target="_blank" class="project-link">View Project</a>
+        </div>
+        <div class="project-card">
+          <img src="kotamedan.jpg" alt="Flutter App" class="project-img" />
+          <h3>Kota-Ku</h3>
+          <p>
+           Website ini saya rancang menggunakan HTML dan CSS untuk memperkenalkan kekayaan budaya, sejarah, wisata, dan kondisi geografis Kota Medan secara interaktif dan informatif.
+          </p>
+          <a href="https://github.com/muhammadhakan/KOTAMEDAN-HTML-CSS" target="_blank" class="project-link">View Project</a>
+        </div>
+        <!-- <div class="project-card">
+          <img src="assets/kematianapp.png" alt="Laravel Death App" class="project-img" />
+          <h3>Laravel Data Kematian Application</h3>
+          <p>
+            Backend system for data management of community deaths, including
+            admin controls and statistics dashboard.
+          </p>
+          <a href="https://your-laravel-kematian-link.com" target="_blank" class="project-link">View Project</a>
+        </div> -->
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <form id="contactForm">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Send Message</button>
+        <p id="formMessage" class="success-msg"></p>
+      </form>
+    </section>
+  </main>
+  <section id="contact1">
+<div class="social-icons">
+  <a href="https://www.instagram.com/adkan__/?next=%2F" target="_blank" class="social-icon" aria-label="Instagram">
+    <i class="fab fa-instagram"></i>
+  </a>
+  <a href="https://linkedin.com/in/usernamekamu" target="_blank" class="social-icon" aria-label="LinkedIn">
+    <i class="fab fa-linkedin"></i>
+  </a>
+  <a href="https://github.com/muhammadhakan" target="_blank" class="social-icon" aria-label="GitHub">
+    <i class="fab fa-github"></i>
+  </a>
+</div>
+</section>
+
+  <footer>&copy; 2025 Adillah Muhammad Haqqan. All rights reserved.</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/three@0.153.0/build/three.min.js"></script>
+  <script src="script.js"></script>
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>
+  window.onload = function () {
+    emailjs.init("86T4YJ0mwPNTTLVT3"); // public key kamu
+  };
+</script>
+</body>
+</html>
